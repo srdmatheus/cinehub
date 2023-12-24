@@ -21,7 +21,7 @@ export const MovieCard = ({
   return (
     <Link className="inline-flex" href={url}>
       <Card.Root>
-        <div className="absolute left-0 right-0 top-0 h-[375px] w-[250px] transition-all duration-500 hover:scale-105">
+        <div className="absolute left-0 right-0 top-0 h-[375px] w-[250px] transition-all duration-500 hover:scale-105 hover:brightness-125">
           <Image src={poster} fill alt={title} />
         </div>
 
