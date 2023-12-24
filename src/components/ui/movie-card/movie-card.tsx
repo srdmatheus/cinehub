@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { Card } from '../card'
+import { Image } from '@/components/image'
 
 type MovieCardProps = {
   title: string
