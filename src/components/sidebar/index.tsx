@@ -3,7 +3,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ComponentProps } from 'react'
 import { Navigation } from '../navigation'
-import { BadgePlus, Clapperboard, Heart, Star, User } from 'lucide-react'
+import {
+  Clapperboard,
+  Heart,
+  ListVideo,
+  Popcorn,
+  Star,
+  TrendingUp
+} from 'lucide-react'
 import { Divider } from '../ui/divider'
 
 type SidebarProps = ComponentProps<'aside'>
@@ -21,11 +28,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </Link>
 
       <Navigation.Root>
-        <Navigation.Section>
+        <Navigation.Section className="mb-0">
           <Navigation.Title>Perfil</Navigation.Title>
           <Navigation.List>
-            <Navigation.Item href={'/'}>
-              <User />
+            <Navigation.Item href={'/my-list'}>
+              <ListVideo />
               Minha lista
             </Navigation.Item>
           </Navigation.List>
@@ -37,16 +44,23 @@ export const Sidebar = ({ className }: SidebarProps) => {
           <Navigation.Title>Filmes</Navigation.Title>
           <Navigation.List>
             <Navigation.Item href={'/'}>
-              <BadgePlus />
-              Lançamentos
-            </Navigation.Item>
-            <Navigation.Item href={'/'}>
               <Clapperboard />
+              Todos
+            </Navigation.Item>
+
+            <Navigation.Item href={'/movies/now-playing'}>
+              <Popcorn />
+              Nos cinemas
+            </Navigation.Item>
+
+            <Navigation.Item href={'/movies/popular'}>
+              <TrendingUp />
               Em alta
             </Navigation.Item>
-            <Navigation.Item href={'/'}>
+
+            <Navigation.Item href={'/movies/top-rated'}>
               <Star />
-              Melhores avaliados
+              Mais votados
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Section>
