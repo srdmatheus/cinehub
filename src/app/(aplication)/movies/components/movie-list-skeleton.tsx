@@ -1,6 +1,6 @@
 import { MovieCardSkeleton } from '@/components/ui/movie-card'
 
-export const MoviesListSkeleton = () => {
+export const MovieListSkeleton = () => {
   return (
     <div className="flex gap-6">
       {
