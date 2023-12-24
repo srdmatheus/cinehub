@@ -19,7 +19,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
   return (
     <aside
       className={cn(
-        'flex h-screen w-80 flex-col gap-8 border-r border-accent px-4 pt-12',
+        'flex h-screen w-80 flex-col gap-8 border-r border-primary/50 px-4 pt-12',
         className
       )}
     >
