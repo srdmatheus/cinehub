@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { MovieListSkeleton } from './movies/components/movie-list-skeleton'
+import { MovieListSkeleton } from './movies/components/movie-list/movie-list-skeleton'
 import { MovieList } from './movies/components/movie-list'
 
 export default function Home() {
