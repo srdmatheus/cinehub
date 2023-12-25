@@ -8,7 +8,7 @@ export const CardDescription = forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn('text-primary text-xs font-normal', className)}
+    className={cn('text-xs font-normal text-primary', className)}
     {...props}
   />
 ))

@@ -8,7 +8,7 @@ export const CardContainer = forwardRef<
   <div
     ref={ref}
     className={cn(
-      'relative flex flex-col h-[375px] w-[250px] rounded-lg shadow-sm overflow-hidden justify-end p-2',
+      'relative flex h-[375px] w-[250px] flex-col justify-end overflow-hidden rounded-lg p-2 shadow-sm',
       className
     )}
     {...props}

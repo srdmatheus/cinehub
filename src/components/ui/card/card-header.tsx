@@ -9,7 +9,7 @@ export const CardHeader = forwardRef<
   <div
     ref={ref}
     className={cn(
-      'flex flex-col gap-2 p-4 z-10 rounded-md backdrop-blur-md bg-background/30 ',
+      'z-10 flex flex-col gap-2 rounded-md bg-background/30 p-4 backdrop-blur-md ',
       className
     )}
     {...props}
