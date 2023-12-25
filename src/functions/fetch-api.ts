@@ -1,3 +1,5 @@
+import { Backdrop } from '@/types/backdrops'
+import { Credits } from '@/types/credits'
 import { MovieDetails } from '@/types/details'
 import { MovieListCategory, Movie } from '@/types/movies'
 
@@ -33,7 +35,11 @@ export const getMovieDetails = async ({ id }: { id: number }) => {
   return data
 }
 
-export const getBackdrops = async ({ id }: { id: number }) => {
+export const getBackdrops = async ({
+  id
+}: {
+  id: number
+}): Promise<Backdrop[]> => {
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${id}/images?api_key=${APIKey}`
   )
@@ -42,7 +48,17 @@ export const getBackdrops = async ({ id }: { id: number }) => {
     throw new Error('Falha ao carregar')
   }
 
-  const { backdrops } = await response.json()
+  const { backdrops }: { backdrops: Backdrop[] } = await response.json()
 
   return backdrops
+}
+
+export const getCredits = async ({ id }: { id: number }): Promise<Credits> => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${APIKey}&language=pt-br`
+  )
+
+  const data = await response.json()
+
+  return data
 }
