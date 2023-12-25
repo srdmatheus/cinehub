@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.className} relative flex overflow-x-hidden bg-background text-primary`}
+        className={`${inter.className} relative mx-auto flex overflow-x-hidden bg-background px-16 text-primary`}
       >
         {children}
       </body>
