@@ -11,7 +11,7 @@ export const CastList = async ({ data }: CastListProps) => {
 
   const actors = cast
     .filter((item) => item.known_for_department === 'Acting')
-    .slice(0, 20)
+    .slice(0, 24)
 
   return (
     <div className="grid grid-cols-[repeat(auto-fit,_minmax(96px,_3fr))] items-start justify-start gap-4">
