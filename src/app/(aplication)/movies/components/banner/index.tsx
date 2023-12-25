@@ -10,7 +10,7 @@ export const Banner = async ({ movieId }: BannerProps) => {
 
   return (
     <div
-      className={`relative flex h-[600px] w-full items-center justify-start overflow-hidden rounded-md border border-background`}
+      className={`relative flex h-[300px] w-full items-center justify-start overflow-hidden rounded-md border border-background md:h-[600px]`}
     >
       <Image src={imageUrl} alt={title} quality={80} fill className="" />
 
