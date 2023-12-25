@@ -6,7 +6,7 @@ export const MovieList = async ({ category }: MovieListCategory) => {
   const movies = await getMoviesByCategory({ category })
 
   return (
-    <div className="flex gap-6">
+    <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_3fr))] items-start justify-start gap-4">
       {movies.map((movie) => (
         <MovieCard
           key={movie.id}
