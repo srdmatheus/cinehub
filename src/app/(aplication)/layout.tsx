@@ -11,7 +11,7 @@ export default function LayoutApplication({
   return (
     <>
       <Sidebar className="sticky left-0 top-0 hidden md:flex" />
-      <main className="w-full overflow-x-hidden px-4">{children}</main>
+      <main className="flex-1 overflow-x-hidden px-4 py-8">{children}</main>
     </>
   )
 }
