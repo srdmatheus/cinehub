@@ -14,13 +14,23 @@ import { Title } from '@/components/ui/title'
 import { BadgeList } from '../../components/badge-list'
 import { Details } from '../../components/details'
 import { HeaderDetails } from '../../components/header-details'
+import { Metadata } from 'next'
 
-type MovieDetailsProps = {
-  params: {
-    movieId: number
+type Props = {
+  params: { movieId: number }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = params.movieId
+
+  const movie = await getMovieDetails({ id })
+
+  return {
+    title: movie.title
   }
 }
-export default async function MovieDetails({ params }: MovieDetailsProps) {
+
+export default async function MovieDetails({ params }: Props) {
   const { movieId } = params
 
   const [movieDetails, credits, backdrops] = await Promise.all([
