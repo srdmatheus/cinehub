@@ -40,9 +40,11 @@ export default async function MovieDetails({ params }: Props) {
   ])
 
   return (
-    <main className="relative mt-4 flex w-full flex-col gap-4">
-      <Banner movieId={movieDetails.id} />
-      <BackButton className="absolute left-8 top-8 z-20" />
+    <div className="flex flex-col gap-4">
+      <div className="relative">
+        <Banner movieId={movieDetails.id} />
+        <BackButton className="absolute left-8 top-8 z-20" />
+      </div>
 
       <HeaderDetails data={movieDetails} />
 
@@ -75,6 +77,6 @@ export default async function MovieDetails({ params }: Props) {
         <Title variant="h3">Galeria</Title>
         <Backdrops data={backdrops} />
       </section>
-    </main>
+    </div>
   )
 }
