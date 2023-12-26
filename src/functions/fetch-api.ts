@@ -62,3 +62,17 @@ export const getCredits = async ({ id }: { id: number }): Promise<Credits> => {
 
   return data
 }
+
+export const getMovieByQuery = async ({
+  query
+}: {
+  query: string
+}): Promise<Movie[]> => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${query}&language=pt-br`
+  )
+
+  const { results }: { results: Movie[] } = await response.json()
+
+  return results
+}
