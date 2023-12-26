@@ -1,4 +1,6 @@
-export const genres = [
+import { Genre } from '@/types/details'
+
+export const genres: Genre[] = [
   {
     id: 28,
     name: 'Ação'
