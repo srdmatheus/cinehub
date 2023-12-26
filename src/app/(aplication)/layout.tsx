@@ -10,8 +10,8 @@ export default function LayoutApplication({
 }: LayoutApplicationProps) {
   return (
     <>
-      <Sidebar className="left-0 top-0 ml-16 hidden md:fixed" />
-      <main className="w-full overflow-x-hidden px-4 md:ml-80">{children}</main>
+      <Sidebar className="sticky left-0 top-0 hidden md:flex" />
+      <main className="w-full overflow-x-hidden px-4">{children}</main>
     </>
   )
 }
