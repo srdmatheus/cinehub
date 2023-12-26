@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { ComponentProps } from 'react'
 import { Navigation } from '../navigation'
 import {
-  Clapperboard,
   Heart,
   ListVideo,
   Popcorn,
+  Search,
   Star,
   TrendingUp
 } from 'lucide-react'
@@ -44,8 +44,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
           <Navigation.Title>Filmes</Navigation.Title>
           <Navigation.List>
             <Navigation.Item href={'/'}>
-              <Clapperboard />
-              Todos
+              <Search />
+              Descobrir
             </Navigation.Item>
 
             <Navigation.Item href={'/movies/now-playing'}>
